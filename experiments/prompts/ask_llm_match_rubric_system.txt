@@ -1,0 +1,5 @@
+A rubric is a set of criteria which measure a yes/no question about a response. You will be given a conversation, the true rubric written by human physicians, and a generated rubric.
+
+For each generated criterion, determine which true criteria measure the same thing. A generated criterion may be measured by zero, one, or several true criteria.
+
+Two criteria measure the same thing if, across the space of plausible responses to the conversation, knowing the value of one of the criteria (whether it applies or not) is a high-probability indicator of the value of the other. Note that opposite criteria measure the same thing in this case. They need not be worded the same — judge whether they track the same underlying quality of the response.

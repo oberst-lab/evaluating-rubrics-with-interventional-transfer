@@ -1,0 +1,168 @@
+{
+  "n_examples": 105,
+  "rubric_models": [
+    "workers-ai/@cf/qwen/qwen3.8-27b",
+    "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+    "claude-opus-5"
+  ],
+  "response_models": [
+    "gpt-5"
+  ],
+  "metrics": {
+    "optimization impact": {
+      "gpt-5": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.021739130434782608,
+          0.03133903133903134,
+          0.07941822882999353
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.04022722435078757,
+          0.08547008547008547,
+          0.13433553386911595
+        ],
+        "claude-opus-5": [
+          0.06403688911846599,
+          0.13105413105413105,
+          0.19047619047619047
+        ]
+      }
+    },
+    "improvement impact": {
+      "gpt-5": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.14290017211703954,
+          0.08490566037735849,
+          0.24491586108127458
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.045743445071357504,
+          0.16981132075471697,
+          0.279072718687286
+        ],
+        "claude-opus-5": [
+          -0.10755057408419899,
+          0.03914590747330961,
+          0.1589562491193462
+        ]
+      }
+    },
+    "degradation impact": {
+      "gpt-5": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.31388817015486864,
+          0.3669402110199297,
+          0.41494265080713677
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.37882659720161194,
+          0.43823146944083224,
+          0.4947233023191223
+        ],
+        "claude-opus-5": [
+          0.35087908547305613,
+          0.4043321299638989,
+          0.453942760739442
+        ]
+      }
+    },
+    "rejection detector": {
+      "gpt-5": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.5518189412926255,
+          0.6020260492040521,
+          0.6465135051955098
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.5169749970083168,
+          0.5687409551374819,
+          0.6195364731810769
+        ],
+        "claude-opus-5": [
+          0.6394083993826373,
+          0.6801736613603473,
+          0.7187116857405831
+        ]
+      }
+    }
+  },
+  "differences": {
+    "optimization impact": {
+      "gpt-5": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.010619779955027293,
+          0.05413105413105413,
+          0.11811137080487417
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.05394363038277516,
+          0.0997150997150997,
+          0.14749506877065788
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.024470494959791603,
+          0.04558404558404558,
+          0.1099767306573589
+        ]
+      }
+    },
+    "improvement impact": {
+      "gpt-5": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.09607889843778947,
+          0.08490566037735849,
+          0.3238526721664274
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.17430510169763352,
+          -0.04575975290404888,
+          0.1118713316894554
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.27421387702746447,
+          -0.13066541328140735,
+          -0.0009488600271258962
+        ]
+      }
+    },
+    "degradation impact": {
+      "gpt-5": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.034086420855495146,
+          0.07129125842090256,
+          0.10714388526452483
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -2.8029199196431463e-05,
+          0.037391918943969205,
+          0.07443886584565074
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.07418233969318339,
+          -0.033899339476933354,
+          0.00820493934185795
+        ]
+      }
+    },
+    "rejection detector": {
+      "gpt-5": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.0791461440012411,
+          -0.03328509406657021,
+          0.011053584515729659
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.04222249569283788,
+          0.07814761215629518,
+          0.11690543637728099
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.0663742438576875,
+          0.11143270622286539,
+          0.1577476207962977
+        ]
+      }
+    }
+  },
+  "response_model": "gpt-5"
+}

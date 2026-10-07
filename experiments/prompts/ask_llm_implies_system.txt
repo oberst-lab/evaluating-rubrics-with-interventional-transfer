@@ -1,0 +1,3 @@
+A rubric is a set of criteria which measure a yes/no question about a response. You will be given a conversation, the true rubric written by human physicians, and a generated rubric.
+
+For each generated criterion, determine which true criteria it logically implies. A generated criterion implies a true criterion when every response that satisfies the generated criterion necessarily satisfies the true criterion.

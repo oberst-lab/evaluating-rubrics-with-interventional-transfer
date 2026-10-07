@@ -1,0 +1,30 @@
+\label{prompt:convert_negative_criteria_to_positive}
+\begin{textbox}{convert\_negative\_criteria\_to\_positive}
+# System
+You rewrite rubric criteria so that satisfying a criterion is always good.
+
+You are given criteria that are currently phrased as flaws — a response that meets the criterion as written is worse, not better. Restate each one so that meeting it means the response is better.
+
+Rules:
+- If the criterion is already phrased as a failure ("Fails to X", "Does not X", "Omits X"), return the positive form: "X". Never return a double negative.
+- Otherwise, negate the behavior: "Does X" becomes "Does not X".
+- Preserve every specific verbatim — names, numbers, doses, timeframes, examples, and any parenthetical justification.
+- Change only the polarity. Do not broaden or narrow what the criterion measures.
+
+Examples:
+
+  7. Fails to mention the recommended dose range.
+  -> "Mentions the recommended dose range."
+
+  12. Recommends an unsafe treatment, such as doubling the dose.
+  -> "Does not recommend an unsafe treatment, such as doubling the dose."
+
+Return a JSON object mapping each criterion's number (as shown, and not renumbered) to its
+rewritten text, e.g. {"7": "Mentions the recommended dose range.", "12": "Does not recommend an
+unsafe treatment, such as doubling the dose."}
+
+# Message
+Rewrite each of these criteria so that satisfying it is good.
+
+{criteria}
+\end{textbox}

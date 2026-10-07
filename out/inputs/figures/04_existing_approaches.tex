@@ -1,0 +1,76 @@
+\providecolor{barexpert}{HTML}{6B6B6B}
+\providecolor{barone}{HTML}{2A78D6}
+\providecolor{bartwo}{HTML}{EB6834}
+\providecolor{barthree}{HTML}{1BAF7A}
+\providecolor{barfour}{HTML}{8E5EA2}
+
+\begin{figure}[t]
+	\centering
+	\begin{tikzpicture}[
+			x=1.05cm, y=1cm,
+			scale=0.9, every node/.append style={scale=0.9},
+			font=\footnotesize,
+			grid/.style={draw=black!12, line width=0.3pt},
+			zeroline/.style={draw=black!55, line width=0.5pt},
+			axisline/.style={draw=black!45, line width=0.4pt},
+			errbar/.style={draw=black!70, line width=0.55pt},
+			tick/.style={font=\scriptsize, text=black!65},
+			glabel/.style={font=\scriptsize, text=black!55},
+			key/.style={draw=black!25, minimum width=0.26cm, minimum height=0.16cm, inner sep=0pt, line width=0.3pt},
+		]
+
+		\draw[grid] (-0.21,0.000) -- (11.27,0.000);
+		\node[tick, anchor=east] at (-0.10,0.000) {0};
+		\draw[grid] (-0.21,1.000) -- (11.27,1.000);
+		\node[tick, anchor=east] at (-0.10,1.000) {0.2};
+		\draw[grid] (-0.21,2.000) -- (11.27,2.000);
+		\node[tick, anchor=east] at (-0.10,2.000) {0.4};
+		\draw[grid] (-0.21,3.000) -- (11.27,3.000);
+		\node[tick, anchor=east] at (-0.10,3.000) {0.6};
+		\draw[grid] (-0.21,4.000) -- (11.27,4.000);
+		\node[tick, anchor=east] at (-0.10,4.000) {0.8};
+		\draw[grid] (-0.21,5.000) -- (11.27,5.000);
+		\node[tick, anchor=east] at (-0.10,5.000) {1};
+		\draw[axisline] (0.00,0) -- (0.00,5);
+		\draw[zeroline] (-0.21,0.000) -- (11.27,0.000);
+		\node[rotate=90, anchor=south, text=black!70] at (-0.88,2.5) {metric value};
+
+		\foreach \x/\lo/\m/\hi/\c/\w/\s/\b in {%
+				0.69/2.324/2.433/2.531/barone/0.28/85/0.000,
+				1.31/2.516/2.618/2.713/bartwo/0.28/85/0.000,
+				1.93/2.465/2.553/2.644/barthree/0.28/85/0.000,
+				3.71/1.129/1.507/1.865/barone/0.28/85/0.000,
+				4.33/1.317/1.704/2.056/bartwo/0.28/85/0.000,
+				4.95/1.408/1.798/2.172/barthree/0.28/85/0.000,
+				6.73/1.320/2.197/2.978/barone/0.28/85/0.000,
+				7.35/0.874/1.954/2.866/bartwo/0.28/85/0.000,
+				7.97/1.498/2.328/3.158/barthree/0.28/85/0.000,
+				9.13/2.325/2.880/3.387/barexpert/0.28/85/0.000,
+				9.75/2.473/2.935/3.445/barone/0.28/85/0.000,
+				10.37/2.717/3.207/3.698/bartwo/0.28/85/0.000,
+				10.99/3.105/3.587/4.053/barthree/0.28/85/0.000}{%
+				\fill[\c!\s] ({\x-\w},\b) rectangle ({\x+\w},\m);
+				\draw[draw=\c!70!black, line width=0.3pt] ({\x-\w},\b) rectangle ({\x+\w},\m);
+				\draw[errbar] (\x,\lo) -- (\x,\hi);
+				\draw[errbar] ({\x-0.36*\w},\lo) -- ({\x+0.36*\w},\lo);
+				\draw[errbar] ({\x-0.36*\w},\hi) -- ({\x+0.36*\w},\hi);}
+
+		\node[anchor=north, align=center, inner sep=3pt] at (1.31,0) {RubricRAG \\LLM-matching \\$F_1$};
+		\node[anchor=north, align=center, inner sep=3pt] at (4.33,0) {GenRubric \\Score Correlation \\(8 responses)};
+		\node[anchor=north, align=center, inner sep=3pt] at (7.35,0) {RubricRAG \\Score Correlation \\(physician) \\$n{=}92$};
+		\node[anchor=north, align=center, inner sep=3pt] at (10.06,0) {RubricRAG \\Discrimination \\High/Low Quality \\(physician vs bad) \\$n{=}92$};
+
+		\node[glabel, anchor=east] at ([yshift=0.45cm]1.35,5.000) {rubric:};
+		\node[key, fill=barexpert!85, draw=barexpert!70!black, anchor=center] (legendkey0) at ([yshift=0.45cm]1.50,5.000) {};
+		\node[anchor=west, inner sep=2pt] (legendname0) at (legendkey0.east) {expert};
+		\node[key, fill=barone!85, draw=barone!70!black, anchor=center] (legendkey1) at ([xshift=0.45cm]legendname0.east) {};
+		\node[anchor=west, inner sep=2pt] (legendname1) at (legendkey1.east) {Qwen3.8-27B};
+		\node[key, fill=bartwo!85, draw=bartwo!70!black, anchor=center] (legendkey2) at ([xshift=0.45cm]legendname1.east) {};
+		\node[anchor=west, inner sep=2pt] (legendname2) at (legendkey2.east) {Deepseek-V4-Flash};
+		\node[key, fill=barthree!85, draw=barthree!70!black, anchor=center] (legendkey3) at ([xshift=0.45cm]legendname2.east) {};
+		\node[anchor=west, inner sep=2pt] (legendname3) at (legendkey3.east) {Opus-5};
+
+	\end{tikzpicture}
+	\caption{}
+	\label{fig:existing_approaches}
+\end{figure}

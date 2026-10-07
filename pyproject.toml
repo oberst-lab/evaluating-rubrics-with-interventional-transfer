@@ -1,0 +1,21 @@
+[project]
+name = "rubric-eval"
+version = "0.1.0"
+description = "Code and cached model outputs behind \"Evaluating Rubric Generation with Interventional Transfer\""
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.4.3",
+    "pydantic>=2.12.5",
+    "requests>=2.32.5",
+    "tqdm>=4.67.3",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
+    "ruff>=0.15.15",
+]
+
+[tool.ruff.lint]
+ignore = ["E712"]

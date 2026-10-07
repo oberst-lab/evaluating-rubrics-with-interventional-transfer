@@ -1,0 +1,421 @@
+{
+  "n_examples": 105,
+  "rubric_models": [
+    "workers-ai/@cf/qwen/qwen3.8-27b",
+    "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+    "claude-opus-5"
+  ],
+  "response_models": [
+    "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8",
+    "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct",
+    "workers-ai/@cf/qwen/qwq-32b",
+    "workers-ai/@cf/zai-org/glm-5.3-flash",
+    "grok/grok-4.20-0309-non-reasoning",
+    "claude-sonnet-4-6",
+    "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+    "gpt-5"
+  ],
+  "metrics": {
+    "match f1": {
+      "no responses": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.31679673664364005,
+          0.35210666428221093,
+          0.3850653631854153
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.35592318294839453,
+          0.39131072068650813,
+          0.42481830235515644
+        ],
+        "claude-opus-5": [
+          0.3532630711736614,
+          0.3882427603759072,
+          0.4237883131795092
+        ]
+      }
+    },
+    "simulate f1": {
+      "no responses": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.21915570894257452,
+          0.2511905293347046,
+          0.2836543066743499
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.27218372705487537,
+          0.30400214609931925,
+          0.3382528800430784
+        ],
+        "claude-opus-5": [
+          0.26843047729047304,
+          0.2970336352492882,
+          0.32923626684204765
+        ]
+      }
+    },
+    "implies f1": {
+      "no responses": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.05737070340355547,
+          0.0751632692575277,
+          0.09340055291929567
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.09488833562489911,
+          0.11501946547176019,
+          0.13542225210504305
+        ],
+        "claude-opus-5": [
+          0.11472270870889853,
+          0.13140984019616778,
+          0.14968729221281168
+        ]
+      }
+    },
+    "score correlation spearman all eight": {
+      "panel": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.22571980406279005,
+          0.3014854002536745,
+          0.3730738390431723
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.2634835190410776,
+          0.3407361346626768,
+          0.4111474169292046
+        ],
+        "claude-opus-5": [
+          0.2816510893461177,
+          0.3596772484981012,
+          0.434327925887016
+        ]
+      }
+    },
+    "score correlation spearman open weight only": {
+      "panel": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.21190836133567326,
+          0.3172956312699828,
+          0.4140134546427283
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.3215757231895882,
+          0.41289194146561814,
+          0.5102108658442651
+        ],
+        "claude-opus-5": [
+          0.24078638536012484,
+          0.340630982242796,
+          0.43304231399164744
+        ]
+      }
+    },
+    "score correlation spearman no GPT family": {
+      "panel": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.21488823974641913,
+          0.2930320336778591,
+          0.3616163087449298
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.27969965924930673,
+          0.3586870993616497,
+          0.4339868181643136
+        ],
+        "claude-opus-5": [
+          0.2386454264778004,
+          0.32228882869918607,
+          0.4022781188261354
+        ]
+      }
+    },
+    "score correlation spearman drop the weakest": {
+      "panel": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.2475867138220744,
+          0.33101125025575007,
+          0.40349951472100054
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.27372862039924506,
+          0.35400930431595384,
+          0.4282887519474178
+        ],
+        "claude-opus-5": [
+          0.3193171599987083,
+          0.4027137757651245,
+          0.47722894349297734
+        ]
+      }
+    },
+    "score correlation spearman drop two weakest": {
+      "panel": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.1407401214624456,
+          0.22690185720823747,
+          0.31308080622566287
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.13737601685328021,
+          0.2287104744095199,
+          0.3178064003707428
+        ],
+        "claude-opus-5": [
+          0.20451266736215337,
+          0.29215242322506824,
+          0.38021485038878094
+        ]
+      }
+    },
+    "score correlation spearman frontier only": {
+      "panel": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.1069688810233201,
+          0.2572074080319368,
+          0.41827247580261157
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.1348506079997243,
+          0.27469368738150507,
+          0.41975624561914393
+        ],
+        "claude-opus-5": [
+          0.24539980101332454,
+          0.3728995625878474,
+          0.501572200908466
+        ]
+      }
+    },
+    "expert score": {
+      "ordinary": {
+        "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8": [
+          0.5434936745288637,
+          0.5824248083071613,
+          0.6226478706478706
+        ],
+        "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct": [
+          0.4138802869632701,
+          0.45267554341083754,
+          0.49514376636435453
+        ],
+        "workers-ai/@cf/qwen/qwq-32b": [
+          0.5376726048228149,
+          0.5806925031084695,
+          0.6237227260368017
+        ],
+        "workers-ai/@cf/zai-org/glm-5.3-flash": [
+          0.5670996217834453,
+          0.6138828064248233,
+          0.654961376741839
+        ],
+        "grok/grok-4.20-0309-non-reasoning": [
+          0.534343145494406,
+          0.5793507581742876,
+          0.6233399550185265
+        ],
+        "claude-sonnet-4-6": [
+          0.5093451686813031,
+          0.555055453416798,
+          0.6011992876793297
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.600853168676173,
+          0.6409770473846105,
+          0.6778553979284021
+        ],
+        "gpt-5": [
+          0.6297989761172534,
+          0.6732071834172675,
+          0.713396528211129
+        ]
+      },
+      "foreign rubric": {
+        "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8": [
+          0.36972728392056126,
+          0.41099892326783083,
+          0.45812654974577244
+        ],
+        "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct": [
+          0.3045676907126487,
+          0.342250142481235,
+          0.3814996158136914
+        ],
+        "workers-ai/@cf/qwen/qwq-32b": [
+          0.4160707741138413,
+          0.4619017350529956,
+          0.5068199080525762
+        ],
+        "workers-ai/@cf/zai-org/glm-5.3-flash": [
+          0.5018964496832145,
+          0.5451531747119982,
+          0.5856526590628481
+        ],
+        "grok/grok-4.20-0309-non-reasoning": [
+          0.3173724217153839,
+          0.36114489851884807,
+          0.40523079946819446
+        ],
+        "claude-sonnet-4-6": [
+          0.44012227190798625,
+          0.48618910967650464,
+          0.5299345694377207
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.5074611150598546,
+          0.5521480806774924,
+          0.5914035101219974
+        ],
+        "gpt-5": [
+          0.5274634425642829,
+          0.5764195235203639,
+          0.625771480814548
+        ]
+      }
+    },
+    "foreign rubric effect": {
+      "panel": {
+        "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8": [
+          0.13453643928433848,
+          0.17142588503933043,
+          0.21432575870285955
+        ],
+        "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct": [
+          0.06983220319985027,
+          0.11042540092960261,
+          0.15237844300501863
+        ],
+        "workers-ai/@cf/qwen/qwq-32b": [
+          0.07065397835513382,
+          0.11879076805547394,
+          0.1611403475142971
+        ],
+        "workers-ai/@cf/zai-org/glm-5.3-flash": [
+          0.025243165584026932,
+          0.06872963171282499,
+          0.11234558149211508
+        ],
+        "grok/grok-4.20-0309-non-reasoning": [
+          0.16116045318671368,
+          0.2182058596554395,
+          0.2738062412222076
+        ],
+        "claude-sonnet-4-6": [
+          0.02446817806376632,
+          0.06886634374029332,
+          0.11411574618192265
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.04618241391350636,
+          0.08882896670711797,
+          0.12988809200836512
+        ],
+        "gpt-5": [
+          0.05334796245615574,
+          0.09678765989690359,
+          0.13988756897475385
+        ]
+      }
+    },
+    "foreign rubric share lost": {
+      "panel": {
+        "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8": [
+          0.21838412572871888,
+          0.27318718381112983,
+          0.3310191787385152
+        ],
+        "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct": [
+          0.172799173432814,
+          0.2457627118644068,
+          0.31335467779700704
+        ],
+        "workers-ai/@cf/qwen/qwq-32b": [
+          0.15554738562091505,
+          0.20846905537459284,
+          0.2634061014263074
+        ],
+        "workers-ai/@cf/zai-org/glm-5.3-flash": [
+          0.037091739186834144,
+          0.0919175911251981,
+          0.14505436366973665
+        ],
+        "grok/grok-4.20-0309-non-reasoning": [
+          0.28113957298739906,
+          0.37099494097807756,
+          0.44954293906576903
+        ],
+        "claude-sonnet-4-6": [
+          0.038355750915750955,
+          0.10973451327433628,
+          0.17840965965965963
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.06566461948630056,
+          0.12538699690402477,
+          0.1831079036200675
+        ],
+        "gpt-5": [
+          0.06742672678827628,
+          0.12735166425470332,
+          0.19062985164740381
+        ]
+      }
+    }
+  },
+  "differences": {},
+  "framings": [
+    "match",
+    "simulate",
+    "implies"
+  ],
+  "response_curations": {
+    "all eight": [
+      "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8",
+      "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "workers-ai/@cf/qwen/qwq-32b",
+      "workers-ai/@cf/zai-org/glm-5.3-flash",
+      "grok/grok-4.20-0309-non-reasoning",
+      "claude-sonnet-4-6",
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "gpt-5"
+    ],
+    "open weight only": [
+      "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8",
+      "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "workers-ai/@cf/qwen/qwq-32b",
+      "workers-ai/@cf/zai-org/glm-5.3-flash",
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731"
+    ],
+    "no GPT family": [
+      "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8",
+      "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "workers-ai/@cf/qwen/qwq-32b",
+      "workers-ai/@cf/zai-org/glm-5.3-flash",
+      "grok/grok-4.20-0309-non-reasoning",
+      "claude-sonnet-4-6",
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731"
+    ],
+    "drop the weakest": [
+      "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "workers-ai/@cf/qwen/qwq-32b",
+      "workers-ai/@cf/zai-org/glm-5.3-flash",
+      "grok/grok-4.20-0309-non-reasoning",
+      "claude-sonnet-4-6",
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "gpt-5"
+    ],
+    "drop two weakest": [
+      "workers-ai/@cf/qwen/qwq-32b",
+      "workers-ai/@cf/zai-org/glm-5.3-flash",
+      "grok/grok-4.20-0309-non-reasoning",
+      "claude-sonnet-4-6",
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "gpt-5"
+    ],
+    "frontier only": [
+      "grok/grok-4.20-0309-non-reasoning",
+      "claude-sonnet-4-6",
+      "gpt-5"
+    ]
+  }
+}

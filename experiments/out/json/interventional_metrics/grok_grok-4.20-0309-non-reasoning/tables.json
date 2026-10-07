@@ -1,0 +1,168 @@
+{
+  "n_examples": 105,
+  "rubric_models": [
+    "workers-ai/@cf/qwen/qwen3.8-27b",
+    "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+    "claude-opus-5"
+  ],
+  "response_models": [
+    "grok/grok-4.20-0309-non-reasoning"
+  ],
+  "metrics": {
+    "optimization impact": {
+      "grok/grok-4.20-0309-non-reasoning": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.035805125960509665,
+          0.024498886414253896,
+          0.07637272938212676
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.02086720113624697,
+          0.066815144766147,
+          0.11232238867699093
+        ],
+        "claude-opus-5": [
+          0.13425643631436315,
+          0.2026726057906459,
+          0.2725618393946498
+        ]
+      }
+    },
+    "improvement impact": {
+      "grok/grok-4.20-0309-non-reasoning": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.10046152518978611,
+          0.19473684210526315,
+          0.286670731707317
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.11715356539575293,
+          0.20577617328519857,
+          0.29762131952017445
+        ],
+        "claude-opus-5": [
+          0.07166930246350099,
+          0.12357723577235773,
+          0.17508333604344856
+        ]
+      }
+    },
+    "degradation impact": {
+      "grok/grok-4.20-0309-non-reasoning": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.019866892673184065,
+          0.0377113133940182,
+          0.05867058823529411
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.025483457972950936,
+          0.04915514592933948,
+          0.07391353759432676
+        ],
+        "claude-opus-5": [
+          0.017004568367989924,
+          0.037107516650808754,
+          0.05746504594898724
+        ]
+      }
+    },
+    "rejection detector": {
+      "grok/grok-4.20-0309-non-reasoning": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.055532560706401786,
+          0.09949409780775717,
+          0.14657332973046003
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.05635714226929693,
+          0.09780775716694773,
+          0.14498195784847343
+        ],
+        "claude-opus-5": [
+          0.0191919610312148,
+          0.047217537942664416,
+          0.0804515745692216
+        ]
+      }
+    }
+  },
+  "differences": {
+    "optimization impact": {
+      "grok/grok-4.20-0309-non-reasoning": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.01856007322478081,
+          0.04231625835189311,
+          0.1082457095514262
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.11762068055921923,
+          0.17817371937639198,
+          0.23939740838447762
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.053630098380815776,
+          0.1358574610244989,
+          0.2143294622971683
+        ]
+      }
+    },
+    "improvement impact": {
+      "grok/grok-4.20-0309-non-reasoning": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.10096599307833218,
+          0.011039331179935413,
+          0.12192579252011537
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.16014627204666504,
+          -0.07115960633290543,
+          0.013914487776568547
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.15927089935210728,
+          -0.08219893751284084,
+          -0.004694082795855245
+        ]
+      }
+    },
+    "degradation impact": {
+      "grok/grok-4.20-0309-non-reasoning": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.010651363830443988,
+          0.011443832535321274,
+          0.034693486428928645
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.019825214221760805,
+          -0.000603796743209449,
+          0.019553872771381275
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.036475510510790905,
+          -0.012047629278530723,
+          0.009420832877993258
+        ]
+      }
+    },
+    "rejection detector": {
+      "grok/grok-4.20-0309-non-reasoning": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.04265675667248691,
+          -0.0016863406408094417,
+          0.04138139153107043
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.0990893127668365,
+          -0.052276559865092755,
+          -0.009257980356046648
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.09526978844782502,
+          -0.05059021922428331,
+          -0.011235056179775289
+        ]
+      }
+    }
+  },
+  "response_model": "grok/grok-4.20-0309-non-reasoning"
+}

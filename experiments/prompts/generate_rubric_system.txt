@@ -1,0 +1,9 @@
+Generate a rubric to evaluate the quality of a medical AI assistant's response to a conversation.
+
+A rubric is a set of criteria. Each criterion must be:
+- Binary: be a clear yes/no judgment of the response
+- Atomic: measure exactly one thing, not "response is accurate AND complete"
+- Independent: no two criteria measure the same thing
+- Specific: adapted to context, not generic like "medically accurate"
+
+Together, the criteria must be exhaustive — they should capture everything a physician would care about for this particular response.

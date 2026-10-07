@@ -1,0 +1,31 @@
+{
+  "paths": {
+    "cache_dir": "cache",
+    "source_results_path": "experiments/out/pickle/interventional_metrics/gpt-5.6-terra/results.pkl",
+    "results_dir": "experiments/out/pickle/criteria_interventions",
+    "json_path": "experiments/out/json/criteria_interventions/tables.json"
+  },
+  "run": {
+    "generators": [
+      "workers-ai/@cf/qwen/qwen3.8-27b",
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "claude-opus-5"
+    ],
+    "response_model": "gpt-5.6-terra",
+    "scoring_model": "google-ai-studio/gemini-3.8-flash",
+    "scoring_reasoning_effort": "medium",
+    "judge_samples": 3,
+    "temperature": null,
+    "max_workers": 12,
+    "model_reasoning_effort": {
+      "workers-ai/@cf/qwen/qwen3.8-27b": "low",
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": "low"
+    },
+    "directions": ["pass", "fail"]
+  },
+  "evaluate": {
+    "n_bootstrap": 1000,
+    "confidence": 0.95,
+    "bootstrap_seed": 0
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "n_examples": 105,
+  "rubric_models": [
+    "workers-ai/@cf/qwen/qwen3.8-27b",
+    "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+    "claude-opus-5"
+  ],
+  "response_models": [
+    "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731"
+  ],
+  "metrics": {
+    "optimization impact": {
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.05227522425871824,
+          0.0,
+          0.04348122260395687
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.012712461926070779,
+          0.06313131313131314,
+          0.11416281564614622
+        ],
+        "claude-opus-5": [
+          0.10444104852621318,
+          0.18181818181818182,
+          0.2521060116354234
+        ]
+      }
+    },
+    "improvement impact": {
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.13934902783072817,
+          0.01639344262295082,
+          0.1522157190635451
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.05764572015856694,
+          0.10344827586206896,
+          0.24069002488484137
+        ],
+        "claude-opus-5": [
+          0.0,
+          0.06517311608961303,
+          0.13307798419746636
+        ]
+      }
+    },
+    "degradation impact": {
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.414461576805971,
+          0.47072879330943845,
+          0.5244316549743135
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.5027466913195796,
+          0.5649867374005305,
+          0.6214877354103697
+        ],
+        "claude-opus-5": [
+          0.43705933042113165,
+          0.4919148936170213,
+          0.5433041679192971
+        ]
+      }
+    },
+    "rejection detector": {
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.5656502211166391,
+          0.6207430340557275,
+          0.6697711666774632
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.5529831078817478,
+          0.5975232198142415,
+          0.6389969837080547
+        ],
+        "claude-opus-5": [
+          0.5869165509914466,
+          0.6362229102167183,
+          0.6837090067656455
+        ]
+      }
+    }
+  },
+  "differences": {
+    "optimization impact": {
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.005113794554695849,
+          0.06313131313131314,
+          0.11437068191576563
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.11762796027501911,
+          0.18181818181818182,
+          0.25003378378378377
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.049063729367441675,
+          0.11868686868686869,
+          0.1878793800829042
+        ]
+      }
+    },
+    "improvement impact": {
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.07140315342069786,
+          0.08705483323911814,
+          0.24833924162197457
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.07361071031581695,
+          0.048779673466662204,
+          0.19285098731646808
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.16119249936422853,
+          -0.038275159772455936,
+          0.11592634079642182
+        ]
+      }
+    },
+    "degradation impact": {
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.05551598408525569,
+          0.09425794409109206,
+          0.1309723146556573
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.021180782655720404,
+          0.021186100307582834,
+          0.06367410056939166
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.11488779934680479,
+          -0.07307184378350923,
+          -0.027785314978422328
+        ]
+      }
+    },
+    "rejection detector": {
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.061613142480411776,
+          -0.023219814241486003,
+          0.01682610120234775
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.03259380151665021,
+          0.01547987616099078,
+          0.07424980057247427
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.0015094128887572149,
+          0.03869969040247678,
+          0.0759381622012881
+        ]
+      }
+    }
+  },
+  "response_model": "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731"
+}

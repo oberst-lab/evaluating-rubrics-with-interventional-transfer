@@ -1,0 +1,54 @@
+{
+  "paths": {
+    "cache_dir": "cache",
+    "results_path": "experiments/out/pickle/existing_approaches/results.pkl",
+    "json_path": "experiments/out/json/existing_approaches/tables.json",
+    "typical_data_path": "healthbench_data/oss_eval.jsonl",
+    "hard_data_path": "healthbench_data/hard.jsonl"
+  },
+  "run": {
+    "response_models": [
+      "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8",
+      "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "workers-ai/@cf/qwen/qwq-32b",
+      "workers-ai/@cf/zai-org/glm-5.3-flash",
+      "grok/grok-4.20-0309-non-reasoning",
+      "claude-sonnet-4-6",
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "gpt-5"
+    ],
+    "rubric_gen_models": [
+      "workers-ai/@cf/qwen/qwen3.8-27b",
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "claude-opus-5"
+    ],
+    "bad_response_model": "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8",
+    "foreign_rubric_seed": 0,
+    "convert_model": "google-ai-studio/gemini-3.8-flash",
+    "scoring_model": "google-ai-studio/gemini-3.8-flash",
+    "similarity_model": "google-ai-studio/gemini-3.8-flash",
+    "judge_samples": 3,
+    "temperature": null,
+    "skip_prompt_ids": [
+      "5a6e4a41-3ea6-4050-a971-93433fe34877",
+      "5c1cf475-6fff-42e2-8508-7e1a14ea9f65"
+    ],
+    "per_theme": 15,
+    "max_workers": 8,
+    "sample_seed": 0,
+    "convert_reasoning_effort": "low",
+    "scoring_reasoning_effort": "medium",
+    "similarity_reasoning_effort": "low",
+    "model_reasoning_effort": {
+      "workers-ai/@cf/qwen/qwen3.8-27b": "low",
+      "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": "low",
+      "workers-ai/@cf/zai-org/glm-5.3-flash": "low"
+    },
+    "similarity_max_workers": 80
+  },
+  "evaluate": {
+    "n_bootstrap": 1000,
+    "confidence": 0.95,
+    "bootstrap_seed": 0
+  }
+}

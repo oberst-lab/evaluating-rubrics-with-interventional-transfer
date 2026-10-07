@@ -1,0 +1,76 @@
+% All generated figures, tables and prompts of the paper, without captions.
+% reproduce.sh compiles this file to out/figures.pdf. The inputs come from out/inputs/.
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[textwidth=5.5in, textheight=9in]{geometry}  % the text width of the paper
+\usepackage[table]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{placeins}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings, breakable, most}
+
+% The generated files use \1C for a rubric.
+\def\1#1{\mathcal{#1}}
+
+% The prompt listings. This is the same definition as in the paper.
+\newtcblisting{textbox}[2][gray!60!black]{%
+	enhanced,
+	breakable,
+	listing only,
+	listing options={
+			basicstyle = \small\ttfamily,
+			breaklines = true,
+			breakatwhitespace = true,
+			columns = fullflexible,
+			extendedchars = true,
+			literate = {—}{{---}}3 {–}{{--}}2 {‘}{{`}}1 {’}{{'}}1
+				{“}{{``}}2 {”}{{''}}2 {…}{{...}}3 {≥}{{>=}}2 {≤}{{<=}}2,
+		},
+	colback       = gray!4!white,
+	colframe      = gray!40!black,
+	colbacktitle  = #1,
+	coltitle      = white,
+	boxrule       = 0.4pt,
+	arc           = 2pt,
+	left=8pt, right=8pt, top=6pt, bottom=6pt,
+	fonttitle     = \bfseries\small\sffamily,
+	title         = {#2},
+	attach boxed title to top left = {yshift=-2mm, xshift=6mm},
+	boxed title style = {arc=2pt, boxrule=0pt},
+}
+
+% The paths are the same as in the paper: inputs/figures/..., inputs/tables/..., inputs/prompts/...
+\makeatletter
+\def\input@path{{out/}}
+\makeatother
+
+% The generated floats have an empty \caption{}. Here the caption of each float is its file name. The number in the name is its number in the paper.
+\let\originalcaption\caption
+\newcommand{\generated}[1]{\renewcommand{\caption}[2][]{\originalcaption{\texttt{\detokenize{#1}}}}\input{inputs/#1}\FloatBarrier}
+
+\begin{document}
+
+% The body of the paper.
+\generated{figures/04_existing_approaches.tex}
+\generated{figures/05_interventional_metrics.tex}
+\generated{figures/06_criterion_composition.tex}
+
+% The appendix of the paper.
+\clearpage
+\generated{tables/A04_existing_differences.tex}
+\generated{figures/A01_matching_framings.tex}
+\generated{figures/A02_response_curations.tex}
+\generated{tables/A05_foreign_rubric.tex}
+\generated{tables/A06_matching_pass_fail.tex}
+\generated{tables/A07_matching_cutoffs.tex}
+\generated{tables/A08_it_differences.tex}
+\generated{figures/A04_it_panel.tex}
+\generated{tables/A10_perturbation_text_stats.tex}
+
+\clearpage
+\section*{Prompts}
+\input{inputs/prompts/00_all.tex}
+
+\end{document}

@@ -1,0 +1,15 @@
+Rewrite the response so it satisfies every criterion below.
+
+# Criteria it satisfies — keep them satisfied
+{satisfied}
+
+# Criteria it does NOT satisfy — change the response so it does
+{unsatisfied}
+
+Change as little as possible: alter, add, or remove only what the unsatisfied criteria require, and keep every other aspect of the response exactly as it is. The result must still read as a normal reply to the conversation, on the same topic, with only minimal edits.
+
+# Conversation
+{conversation}
+
+# Response
+{response}

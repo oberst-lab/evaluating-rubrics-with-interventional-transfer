@@ -1,0 +1,180 @@
+{
+  "n_examples": 105,
+  "rubric_models": [
+    "workers-ai/@cf/qwen/qwen3.8-27b",
+    "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+    "claude-opus-5"
+  ],
+  "response_models": [
+    "workers-ai/@cf/qwen/qwen3-30b-a3b-fp8",
+    "workers-ai/@cf/meta/llama-4-scout-17b-16e-instruct",
+    "workers-ai/@cf/qwen/qwq-32b",
+    "workers-ai/@cf/zai-org/glm-5.3-flash",
+    "grok/grok-4.20-0309-non-reasoning",
+    "claude-sonnet-4-6",
+    "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+    "gpt-5"
+  ],
+  "metrics": {
+    "f1": {
+      "no responses": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.4647481690399801,
+          0.4866468864580821,
+          0.5062605142893473
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.5032344637028178,
+          0.5235767764776575,
+          0.5426862996056088
+        ],
+        "claude-opus-5": [
+          0.49297882967093,
+          0.5105658756890363,
+          0.5287037019592307
+        ]
+      }
+    },
+    "score correlation": {
+      "panel": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.22571980406279005,
+          0.3014854002536745,
+          0.3730738390431723
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.2634835190410776,
+          0.3407361346626768,
+          0.4111474169292046
+        ],
+        "claude-opus-5": [
+          0.2816510893461177,
+          0.3596772484981012,
+          0.434327925887016
+        ]
+      }
+    },
+    "score correlation spearman": {
+      "physician": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.2639282346731753,
+          0.4393896641417709,
+          0.5956210537993816
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.1747611830912944,
+          0.3908861711960306,
+          0.5731062361434668
+        ],
+        "claude-opus-5": [
+          0.2996827709131901,
+          0.4655332064928477,
+          0.6316012673194465
+        ]
+      }
+    },
+    "preference alignment": {
+      "physician vs bad": {
+        "true": [
+          0.46506731946144436,
+          0.5760869565217391,
+          0.6774283154121863
+        ],
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.4946207018787664,
+          0.5869565217391305,
+          0.6889080459770115
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.5434551341350601,
+          0.6413043478260869,
+          0.7396330758426967
+        ],
+        "claude-opus-5": [
+          0.6210526315789474,
+          0.717391304347826,
+          0.8105409356725146
+        ]
+      }
+    }
+  },
+  "differences": {
+    "f1": {
+      "no responses": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.02076560495137114,
+          0.03692989001957547,
+          0.0537050571201296
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.00689906688365962,
+          0.023918989230954257,
+          0.04003025542748693
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.029050053788838834,
+          -0.013010900788621216,
+          0.001639644986280604
+        ]
+      }
+    },
+    "score correlation": {
+      "panel": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.04659822625534864,
+          0.03925073440900234,
+          0.1314840960667845
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.02197711307199105,
+          0.05819184824442669,
+          0.1468504888622738
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.06092420133028541,
+          0.01894111383542435,
+          0.09453841350692016
+        ]
+      }
+    },
+    "score correlation spearman": {
+      "physician": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.21268277218331405,
+          -0.0485034929457403,
+          0.09147296237861013
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.14319933708991095,
+          0.0261435423510768,
+          0.19323823221323816
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.09897551563134337,
+          0.0746470352968171,
+          0.2672418886158965
+        ]
+      }
+    },
+    "preference alignment": {
+      "physician vs bad": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.032976190476190465,
+          0.05434782608695643,
+          0.14737739234449762
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.03260869565217395,
+          0.13043478260869557,
+          0.23404255319148937
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.021505376344086002,
+          0.07608695652173914,
+          0.17899496080627095
+        ]
+      }
+    }
+  },
+  "n_physician": 92
+}

@@ -1,0 +1,168 @@
+{
+  "n_examples": 105,
+  "rubric_models": [
+    "workers-ai/@cf/qwen/qwen3.8-27b",
+    "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731",
+    "claude-opus-5"
+  ],
+  "response_models": [
+    "gpt-5.6-terra"
+  ],
+  "metrics": {
+    "optimization impact": {
+      "gpt-5.6-terra": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.06269827705331749,
+          -0.0026666666666666666,
+          0.04398871527777777
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.005363751602750902,
+          0.050666666666666665,
+          0.10527202838557065
+        ],
+        "claude-opus-5": [
+          0.02271641574985525,
+          0.10666666666666667,
+          0.17100088933570487
+        ]
+      }
+    },
+    "improvement impact": {
+      "gpt-5.6-terra": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.039025787124060185,
+          0.14925373134328357,
+          0.2528379703941501
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.04931338028169012,
+          0.11494252873563218,
+          0.23190378820490742
+        ],
+        "claude-opus-5": [
+          -0.011397523645927238,
+          0.060453400503778336,
+          0.12743233034091758
+        ]
+      }
+    },
+    "degradation impact": {
+      "gpt-5.6-terra": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.40842686104535314,
+          0.46424242424242423,
+          0.5164584140737459
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.4960389610389611,
+          0.5596816976127321,
+          0.6163142468289527
+        ],
+        "claude-opus-5": [
+          0.40793439890433253,
+          0.46020488573680063,
+          0.507153757393195
+        ]
+      }
+    },
+    "rejection detector": {
+      "gpt-5.6-terra": {
+        "workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.5639489147068001,
+          0.6146926536731634,
+          0.6645413984854553
+        ],
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.5446529768569214,
+          0.5847076461769115,
+          0.6207580839353285
+        ],
+        "claude-opus-5": [
+          0.6063549832026877,
+          0.6491754122938531,
+          0.6917264339273542
+        ]
+      }
+    }
+  },
+  "differences": {
+    "optimization impact": {
+      "gpt-5.6-terra": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.021470187368011123,
+          0.05333333333333333,
+          0.127800491510277
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.040099286033020994,
+          0.10933333333333334,
+          0.1721848359597003
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.024172271599007106,
+          0.05600000000000001,
+          0.12952766950153555
+        ]
+      }
+    },
+    "improvement impact": {
+      "gpt-5.6-terra": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.1839376502704869,
+          -0.034311202607651387,
+          0.08665798991148753
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.21671257603032368,
+          -0.08880033083950523,
+          0.03869826798709132
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.17818257117089045,
+          -0.054489128231853846,
+          0.10272027687001559
+        ]
+      }
+    },
+    "degradation impact": {
+      "gpt-5.6-terra": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.05070384903791489,
+          0.09543927337030789,
+          0.1426410395462793
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.03980959277449409,
+          -0.004037538505623606,
+          0.03752900185040557
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          -0.14373594450204888,
+          -0.09947681187593149,
+          -0.056199426265070705
+        ]
+      }
+    },
+    "rejection detector": {
+      "gpt-5.6-terra": {
+        "workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731|workers-ai/@cf/qwen/qwen3.8-27b": [
+          -0.07123715570144136,
+          -0.02998500749625188,
+          0.008637207536023933
+        ],
+        "claude-opus-5|workers-ai/@cf/qwen/qwen3.8-27b": [
+          0.001363636363636371,
+          0.034482758620689724,
+          0.0720743939816104
+        ],
+        "claude-opus-5|workers-ai/@cf/deepseek-ai/deepseek-v4-flash-0731": [
+          0.03280968639648277,
+          0.0644677661169416,
+          0.09855534303970356
+        ]
+      }
+    }
+  },
+  "response_model": "gpt-5.6-terra"
+}

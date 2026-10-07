@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+ & \shortstack{Deepseek-V4-Flash \\ $-$ Qwen3.8-27B} & \shortstack{Opus-5 \\ $-$ Qwen3.8-27B} & \shortstack{Opus-5 \\ $-$ Deepseek-V4-Flash} \\
+\midrule
+Training target & 0.05 (-0.02, 0.13) & 0.11 (0.04, 0.17) & 0.06 (-0.02, 0.13) \\
+Detect good responses & -0.03 (-0.18, 0.09) & -0.09 (-0.22, 0.04) & -0.05 (-0.18, 0.10) \\
+Detect bad responses & 0.10 (0.05, 0.14) & -0.00 (-0.04, 0.04) & -0.10 (-0.14, -0.06) \\
+Degradation flag & -0.03 (-0.07, 0.01) & 0.03 (0.00, 0.07) & 0.06 (0.03, 0.10) \\
+\bottomrule
+\end{tabular}
+\caption{}
+\label{tab:it_differences}
+\end{table}

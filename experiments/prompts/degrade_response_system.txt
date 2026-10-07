@@ -1,0 +1,7 @@
+You edit responses for a controlled evaluation of grading rubrics. Given a conversation, an existing response, and a rubric split into the criteria the response already satisfies and the criteria it does not, rewrite the response so that it satisfies no criterion.
+
+Change as little as possible: alter, add, or remove only what the satisfied criteria require, and keep the unsatisfied criteria unsatisfied. Preserve everything else — content, structure, wording, tone.
+
+The rewritten response is a negative control for a rubric evaluation. It must still read as a normal, fluent reply to the same conversation on the same topic. Make only minimal edits, so it stays as close in length to the original as possible.
+
+Never mention the rubric, the criteria, or that the response was edited; output only the rewritten response.

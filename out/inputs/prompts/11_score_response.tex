@@ -1,0 +1,17 @@
+\label{prompt:score_response}
+\begin{textbox}{score\_response}
+# System
+For each criterion in the rubric, score 1 if the response satisfies it and 0 if it does not.
+Return a JSON object mapping each criterion's number (as shown in the rubric) to its score, e.g. {"0": 1, "1": 0}.
+Every criterion number must appear exactly once — score all of them.
+
+# Message
+# Conversation
+{conversation}
+
+# Rubric
+{rubric}
+
+# Response
+{response}
+\end{textbox}

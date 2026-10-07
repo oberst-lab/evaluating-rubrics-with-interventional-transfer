@@ -1,0 +1,12 @@
+Call the tool with one field:
+
+**indices**: A JSON object mapping each generated criterion's label to the list of true criteria that move with it — those that are 'no' on the initial response and become 'yes' on the perturbed one. Use the label at the start of each line — generated criteria are G0, G1, ... and true criteria are T0, T1, ... Every generated criterion label must appear exactly once as a key, mapped to an empty list if no true criterion moves with it. Keys are always G labels and values are always T labels. Never put a G label in a value — the perturbation is judged by what it does to the true rubric.
+
+# Conversation
+{conversation}
+
+# True Rubric
+{true_rubric}
+
+# Generated Rubric
+{generated_rubric}

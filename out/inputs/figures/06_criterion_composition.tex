@@ -1,0 +1,218 @@
+\providecolor{barexpert}{HTML}{6B6B6B}
+\providecolor{barone}{HTML}{2A78D6}
+\providecolor{bartwo}{HTML}{EB6834}
+\providecolor{barthree}{HTML}{1BAF7A}
+\providecolor{barfour}{HTML}{8E5EA2}
+
+\begin{figure}[t]
+	\centering
+	\begin{tikzpicture}[x=1cm, y=1cm, font=\footnotesize,
+			pct/.style={font=\scriptsize, inner sep=0pt},
+			tick/.style={font=\scriptsize, text=black!65},
+			glabel/.style={font=\scriptsize, text=black!55},
+			key/.style={draw=black!25, minimum width=0.26cm, minimum height=0.16cm, inner sep=0pt, line width=0.3pt},
+		]
+
+		\node[anchor=south, text=black!70] at (5.45,0.05) {intervene to pass: $R_{+c}$};
+		\node[anchor=south, text=black!70] at (10.55,0.05) {intervene to fail: $R_{-c}$};
+
+		\draw[draw=black!12, line width=0.3pt] (3.30,-3.680) -- (3.30,0.000);
+		\node[tick, anchor=north] at (3.30,-3.720) {0\%};
+		\draw[draw=black!12, line width=0.3pt] (4.38,-3.680) -- (4.38,0.000);
+		\node[tick, anchor=north] at (4.38,-3.720) {25\%};
+		\draw[draw=black!12, line width=0.3pt] (5.45,-3.680) -- (5.45,0.000);
+		\node[tick, anchor=north] at (5.45,-3.720) {50\%};
+		\draw[draw=black!12, line width=0.3pt] (6.52,-3.680) -- (6.52,0.000);
+		\node[tick, anchor=north] at (6.52,-3.720) {75\%};
+		\draw[draw=black!12, line width=0.3pt] (7.60,-3.680) -- (7.60,0.000);
+		\node[tick, anchor=north] at (7.60,-3.720) {100\%};
+		\draw[draw=black!12, line width=0.3pt] (8.40,-3.680) -- (8.40,0.000);
+		\node[tick, anchor=north] at (8.40,-3.720) {0\%};
+		\draw[draw=black!12, line width=0.3pt] (9.47,-3.680) -- (9.47,0.000);
+		\node[tick, anchor=north] at (9.47,-3.720) {25\%};
+		\draw[draw=black!12, line width=0.3pt] (10.55,-3.680) -- (10.55,0.000);
+		\node[tick, anchor=north] at (10.55,-3.720) {50\%};
+		\draw[draw=black!12, line width=0.3pt] (11.62,-3.680) -- (11.62,0.000);
+		\node[tick, anchor=north] at (11.62,-3.720) {75\%};
+		\draw[draw=black!12, line width=0.3pt] (12.70,-3.680) -- (12.70,0.000);
+		\node[tick, anchor=north] at (12.70,-3.720) {100\%};
+		\node[anchor=east, text=black!55] at (3.22,-0.230) {$\1C^*$ impact via $c^g$ from};
+		\node[anchor=east, text=black!80] at (3.22,-0.690) {Qwen3.8-27B};
+		\fill[black!22] (3.300,-0.833) rectangle (6.809,-0.547);
+		\node[pct, text=black!75] at (5.054,-0.690) {82};
+		\fill[barone] (6.809,-0.833) rectangle (7.428,-0.547);
+		\node[pct, text=white] at (7.118,-0.690) {14};
+		\fill[barthree] (7.428,-0.833) rectangle (7.600,-0.547);
+		\draw[draw=black!35, line width=0.3pt] (3.300,-0.833) rectangle (7.600,-0.547);
+		\fill[black!22] (8.400,-0.833) rectangle (10.414,-0.547);
+		\node[pct, text=black!75] at (9.407,-0.690) {47};
+		\fill[barone] (10.414,-0.833) rectangle (11.560,-0.547);
+		\node[pct, text=white] at (10.987,-0.690) {27};
+		\fill[barthree] (11.560,-0.833) rectangle (12.700,-0.547);
+		\node[pct, text=white] at (12.130,-0.690) {27};
+		\draw[draw=black!35, line width=0.3pt] (8.400,-0.833) rectangle (12.700,-0.547);
+		\node[anchor=east, text=black!80] at (3.22,-1.150) {Deepseek-V4-Flash};
+		\fill[black!22] (3.300,-1.293) rectangle (7.020,-1.007);
+		\node[pct, text=black!75] at (5.160,-1.150) {87};
+		\fill[barone] (7.020,-1.293) rectangle (7.389,-1.007);
+		\fill[barthree] (7.389,-1.293) rectangle (7.600,-1.007);
+		\draw[draw=black!35, line width=0.3pt] (3.300,-1.293) rectangle (7.600,-1.007);
+		\fill[black!22] (8.400,-1.293) rectangle (10.406,-1.007);
+		\node[pct, text=black!75] at (9.403,-1.150) {47};
+		\fill[barone] (10.406,-1.293) rectangle (11.620,-1.007);
+		\node[pct, text=white] at (11.013,-1.150) {28};
+		\fill[barthree] (11.620,-1.293) rectangle (12.700,-1.007);
+		\node[pct, text=white] at (12.160,-1.150) {25};
+		\draw[draw=black!35, line width=0.3pt] (8.400,-1.293) rectangle (12.700,-1.007);
+		\node[anchor=east, text=black!80] at (3.22,-1.610) {Opus-5};
+		\fill[black!22] (3.300,-1.753) rectangle (6.805,-1.467);
+		\node[pct, text=black!75] at (5.052,-1.610) {82};
+		\fill[barone] (6.805,-1.753) rectangle (7.376,-1.467);
+		\node[pct, text=white] at (7.090,-1.610) {13};
+		\fill[barthree] (7.376,-1.753) rectangle (7.600,-1.467);
+		\draw[draw=black!35, line width=0.3pt] (3.300,-1.753) rectangle (7.600,-1.467);
+		\fill[black!22] (8.400,-1.753) rectangle (10.861,-1.467);
+		\node[pct, text=black!75] at (9.630,-1.610) {57};
+		\fill[barone] (10.861,-1.753) rectangle (11.917,-1.467);
+		\node[pct, text=white] at (11.389,-1.610) {25};
+		\fill[barthree] (11.917,-1.753) rectangle (12.700,-1.467);
+		\node[pct, text=white] at (12.308,-1.610) {18};
+		\draw[draw=black!35, line width=0.3pt] (8.400,-1.753) rectangle (12.700,-1.467);
+		\node[anchor=east, text=black!55] at (3.22,-2.070) {$\1C^g$ impact via $c^*$ from};
+		\node[anchor=east, text=black!80] at (3.22,-2.530) {Qwen3.8-27B};
+		\fill[black!22] (3.300,-2.673) rectangle (7.079,-2.387);
+		\node[pct, text=black!75] at (5.190,-2.530) {88};
+		\fill[barone] (7.079,-2.673) rectangle (7.515,-2.387);
+		\fill[barthree] (7.515,-2.673) rectangle (7.600,-2.387);
+		\draw[draw=black!35, line width=0.3pt] (3.300,-2.673) rectangle (7.600,-2.387);
+		\fill[black!22] (8.400,-2.673) rectangle (10.707,-2.387);
+		\node[pct, text=black!75] at (9.553,-2.530) {54};
+		\fill[barone] (10.707,-2.673) rectangle (11.948,-2.387);
+		\node[pct, text=white] at (11.328,-2.530) {29};
+		\fill[barthree] (11.948,-2.673) rectangle (12.700,-2.387);
+		\node[pct, text=white] at (12.324,-2.530) {17};
+		\draw[draw=black!35, line width=0.3pt] (8.400,-2.673) rectangle (12.700,-2.387);
+		\node[anchor=east, text=black!80] at (3.22,-2.990) {Deepseek-V4-Flash};
+		\fill[black!22] (3.300,-3.133) rectangle (7.006,-2.847);
+		\node[pct, text=black!75] at (5.153,-2.990) {86};
+		\fill[barone] (7.006,-3.133) rectangle (7.515,-2.847);
+		\node[pct, text=white] at (7.261,-2.990) {12};
+		\fill[barthree] (7.515,-3.133) rectangle (7.600,-2.847);
+		\draw[draw=black!35, line width=0.3pt] (3.300,-3.133) rectangle (7.600,-2.847);
+		\fill[black!22] (8.400,-3.133) rectangle (10.422,-2.847);
+		\node[pct, text=black!75] at (9.411,-2.990) {47};
+		\fill[barone] (10.422,-3.133) rectangle (11.678,-2.847);
+		\node[pct, text=white] at (11.050,-2.990) {29};
+		\fill[barthree] (11.678,-3.133) rectangle (12.700,-2.847);
+		\node[pct, text=white] at (12.189,-2.990) {24};
+		\draw[draw=black!35, line width=0.3pt] (8.400,-3.133) rectangle (12.700,-2.847);
+		\node[anchor=east, text=black!80] at (3.22,-3.450) {Opus-5};
+		\fill[black!22] (3.300,-3.593) rectangle (6.498,-3.307);
+		\node[pct, text=black!75] at (4.899,-3.450) {74};
+		\fill[barone] (6.498,-3.593) rectangle (7.418,-3.307);
+		\node[pct, text=white] at (6.958,-3.450) {21};
+		\fill[barthree] (7.418,-3.593) rectangle (7.600,-3.307);
+		\draw[draw=black!35, line width=0.3pt] (3.300,-3.593) rectangle (7.600,-3.307);
+		\fill[black!22] (8.400,-3.593) rectangle (9.860,-3.307);
+		\node[pct, text=black!75] at (9.130,-3.450) {34};
+		\fill[barone] (9.860,-3.593) rectangle (11.167,-3.307);
+		\node[pct, text=white] at (10.513,-3.450) {30};
+		\fill[barthree] (11.167,-3.593) rectangle (12.700,-3.307);
+		\node[pct, text=white] at (11.933,-3.450) {36};
+		\draw[draw=black!35, line width=0.3pt] (8.400,-3.593) rectangle (12.700,-3.307);
+		\node[key, fill=black!22, anchor=west] at (3.30,-4.300) {};
+		\node[anchor=west, inner sep=2pt] at (3.60,-4.300) {irrelevant};
+		\node[key, fill=barone, anchor=west] at (5.70,-4.300) {};
+		\node[anchor=west, inner sep=2pt] at (6.00,-4.300) {matched};
+		\node[key, fill=barthree, anchor=west] at (7.62,-4.300) {};
+		\node[anchor=west, inner sep=2pt] at (7.92,-4.300) {general};
+
+		\draw[draw=black!12, line width=0.3pt] (3.30,-6.690) -- (3.30,-4.850);
+		\node[tick, anchor=north] at (3.30,-6.730) {0\%};
+		\draw[draw=black!12, line width=0.3pt] (4.38,-6.690) -- (4.38,-4.850);
+		\node[tick, anchor=north] at (4.38,-6.730) {25\%};
+		\draw[draw=black!12, line width=0.3pt] (5.45,-6.690) -- (5.45,-4.850);
+		\node[tick, anchor=north] at (5.45,-6.730) {50\%};
+		\draw[draw=black!12, line width=0.3pt] (6.52,-6.690) -- (6.52,-4.850);
+		\node[tick, anchor=north] at (6.52,-6.730) {75\%};
+		\draw[draw=black!12, line width=0.3pt] (7.60,-6.690) -- (7.60,-4.850);
+		\node[tick, anchor=north] at (7.60,-6.730) {100\%};
+		\draw[draw=black!12, line width=0.3pt] (8.40,-6.690) -- (8.40,-4.850);
+		\node[tick, anchor=north] at (8.40,-6.730) {0\%};
+		\draw[draw=black!12, line width=0.3pt] (9.47,-6.690) -- (9.47,-4.850);
+		\node[tick, anchor=north] at (9.47,-6.730) {25\%};
+		\draw[draw=black!12, line width=0.3pt] (10.55,-6.690) -- (10.55,-4.850);
+		\node[tick, anchor=north] at (10.55,-6.730) {50\%};
+		\draw[draw=black!12, line width=0.3pt] (11.62,-6.690) -- (11.62,-4.850);
+		\node[tick, anchor=north] at (11.62,-6.730) {75\%};
+		\draw[draw=black!12, line width=0.3pt] (12.70,-6.690) -- (12.70,-4.850);
+		\node[tick, anchor=north] at (12.70,-6.730) {100\%};
+		\node[anchor=east, text=black!80] at (3.22,-5.080) {Qwen3.8-27B};
+		\fill[black!22] (3.300,-5.223) rectangle (6.430,-4.937);
+		\node[pct, text=black!75] at (4.865,-5.080) {73};
+		\fill[bartwo!70] (6.430,-5.223) rectangle (7.084,-4.937);
+		\node[pct, text=white] at (6.757,-5.080) {15};
+		\fill[barfour] (7.084,-5.223) rectangle (7.600,-4.937);
+		\node[pct, text=white] at (7.342,-5.080) {12};
+		\draw[draw=black!35, line width=0.3pt] (3.300,-5.223) rectangle (7.600,-4.937);
+		\fill[black!22] (8.400,-5.223) rectangle (11.160,-4.937);
+		\node[pct, text=black!75] at (9.780,-5.080) {64};
+		\fill[bartwo!70] (11.160,-5.223) rectangle (12.148,-4.937);
+		\node[pct, text=white] at (11.654,-5.080) {23};
+		\fill[barfour] (12.148,-5.223) rectangle (12.700,-4.937);
+		\node[pct, text=white] at (12.424,-5.080) {13};
+		\draw[draw=black!35, line width=0.3pt] (8.400,-5.223) rectangle (12.700,-4.937);
+		\node[anchor=east, text=black!80] at (3.22,-5.540) {Deepseek-V4-Flash};
+		\fill[black!22] (3.300,-5.683) rectangle (6.782,-5.397);
+		\node[pct, text=black!75] at (5.041,-5.540) {81};
+		\fill[bartwo!70] (6.782,-5.683) rectangle (7.363,-5.397);
+		\node[pct, text=white] at (7.072,-5.540) {13};
+		\fill[barfour] (7.363,-5.683) rectangle (7.600,-5.397);
+		\draw[draw=black!35, line width=0.3pt] (3.300,-5.683) rectangle (7.600,-5.397);
+		\fill[black!22] (8.400,-5.683) rectangle (11.250,-5.397);
+		\node[pct, text=black!75] at (9.825,-5.540) {66};
+		\fill[bartwo!70] (11.250,-5.683) rectangle (12.157,-5.397);
+		\node[pct, text=white] at (11.703,-5.540) {21};
+		\fill[barfour] (12.157,-5.683) rectangle (12.700,-5.397);
+		\node[pct, text=white] at (12.428,-5.540) {13};
+		\draw[draw=black!35, line width=0.3pt] (8.400,-5.683) rectangle (12.700,-5.397);
+		\node[anchor=east, text=black!80] at (3.22,-6.000) {Opus-5};
+		\fill[black!22] (3.300,-6.143) rectangle (6.682,-5.857);
+		\node[pct, text=black!75] at (4.991,-6.000) {79};
+		\fill[bartwo!70] (6.682,-6.143) rectangle (7.286,-5.857);
+		\node[pct, text=white] at (6.984,-6.000) {14};
+		\fill[barfour] (7.286,-6.143) rectangle (7.600,-5.857);
+		\draw[draw=black!35, line width=0.3pt] (3.300,-6.143) rectangle (7.600,-5.857);
+		\fill[black!22] (8.400,-6.143) rectangle (10.932,-5.857);
+		\node[pct, text=black!75] at (9.666,-6.000) {59};
+		\fill[bartwo!70] (10.932,-6.143) rectangle (12.067,-5.857);
+		\node[pct, text=white] at (11.499,-6.000) {26};
+		\fill[barfour] (12.067,-6.143) rectangle (12.700,-5.857);
+		\node[pct, text=white] at (12.384,-6.000) {15};
+		\draw[draw=black!35, line width=0.3pt] (8.400,-6.143) rectangle (12.700,-5.857);
+		\node[anchor=east, text=black!80] at (3.22,-6.460) {expert};
+		\fill[black!22] (3.300,-6.603) rectangle (6.377,-6.317);
+		\node[pct, text=black!75] at (4.838,-6.460) {72};
+		\fill[bartwo!70] (6.377,-6.603) rectangle (7.237,-6.317);
+		\node[pct, text=white] at (6.807,-6.460) {20};
+		\fill[barfour] (7.237,-6.603) rectangle (7.600,-6.317);
+		\draw[draw=black!35, line width=0.3pt] (3.300,-6.603) rectangle (7.600,-6.317);
+		\fill[black!22] (8.400,-6.603) rectangle (10.415,-6.317);
+		\node[pct, text=black!75] at (9.407,-6.460) {47};
+		\fill[bartwo!70] (10.415,-6.603) rectangle (11.590,-6.317);
+		\node[pct, text=white] at (11.003,-6.460) {27};
+		\fill[barfour] (11.590,-6.603) rectangle (12.700,-6.317);
+		\node[pct, text=white] at (12.145,-6.460) {26};
+		\draw[draw=black!35, line width=0.3pt] (8.400,-6.603) rectangle (12.700,-6.317);
+		\node[glabel, anchor=east] at (3.22,-7.310) {own-rubric criteria moved:};
+		\node[key, fill=black!22, anchor=west] at (3.30,-7.310) {};
+		\node[anchor=west, inner sep=2pt] at (3.60,-7.310) {none};
+		\node[key, fill=bartwo!70, anchor=west] at (4.74,-7.310) {};
+		\node[anchor=west, inner sep=2pt] at (5.04,-7.310) {one};
+		\node[key, fill=barfour, anchor=west] at (6.02,-7.310) {};
+		\node[anchor=west, inner sep=2pt] at (6.32,-7.310) {several};
+
+	\end{tikzpicture}
+	\caption{}
+	\label{fig:criterion_composition}
+\end{figure}

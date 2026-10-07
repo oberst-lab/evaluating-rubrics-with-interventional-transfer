@@ -1,0 +1,21 @@
+\label{prompt:ask_llm_simulate_intervention}
+\begin{textbox}{ask\_llm\_simulate\_intervention}
+# System
+A rubric is a set of criteria which measure a yes/no question about a response. You will be given a conversation, the true rubric written by human physicians, and a generated rubric.
+
+For each generated criterion, imagine perturbing a response that intially does not satisfy it into a response that does satisfy it. Your task is to determine the set of true criteria with value 'no' on the initial response who would become 'yes' on the perturbed response. That is, which set of true criteria move with the generated.
+
+# Message
+Call the tool with one field:
+
+**indices**: A JSON object mapping each generated criterion's label to the list of true criteria that move with it — those that are 'no' on the initial response and become 'yes' on the perturbed one. Use the label at the start of each line — generated criteria are G0, G1, ... and true criteria are T0, T1, ... Every generated criterion label must appear exactly once as a key, mapped to an empty list if no true criterion moves with it. Keys are always G labels and values are always T labels. Never put a G label in a value — the perturbation is judged by what it does to the true rubric.
+
+# Conversation
+{conversation}
+
+# True Rubric
+{true_rubric}
+
+# Generated Rubric
+{generated_rubric}
+\end{textbox}

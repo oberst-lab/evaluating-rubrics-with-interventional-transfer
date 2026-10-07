@@ -1,0 +1,82 @@
+\providecolor{barexpert}{HTML}{6B6B6B}
+\providecolor{barone}{HTML}{2A78D6}
+\providecolor{bartwo}{HTML}{EB6834}
+\providecolor{barthree}{HTML}{1BAF7A}
+\providecolor{barfour}{HTML}{8E5EA2}
+
+\begin{figure}[t]
+	\centering
+	\begin{tikzpicture}[
+			x=0.88cm, y=1cm,
+			font=\footnotesize,
+			grid/.style={draw=black!12, line width=0.3pt},
+			zeroline/.style={draw=black!55, line width=0.5pt},
+			axisline/.style={draw=black!45, line width=0.4pt},
+			errbar/.style={draw=black!70, line width=0.55pt},
+			tick/.style={font=\scriptsize, text=black!65},
+			glabel/.style={font=\scriptsize, text=black!55},
+			key/.style={draw=black!25, minimum width=0.26cm, minimum height=0.16cm, inner sep=0pt, line width=0.3pt},
+		]
+
+		\draw[grid] (0.10,0.000) -- (13.90,0.000);
+		\node[tick, anchor=east] at (-0.10,0.000) {0};
+		\draw[grid] (0.10,0.833) -- (13.90,0.833);
+		\node[tick, anchor=east] at (-0.10,0.833) {0.1};
+		\draw[grid] (0.10,1.667) -- (13.90,1.667);
+		\node[tick, anchor=east] at (-0.10,1.667) {0.2};
+		\draw[grid] (0.10,2.500) -- (13.90,2.500);
+		\node[tick, anchor=east] at (-0.10,2.500) {0.3};
+		\draw[grid] (0.10,3.333) -- (13.90,3.333);
+		\node[tick, anchor=east] at (-0.10,3.333) {0.4};
+		\draw[grid] (0.10,4.167) -- (13.90,4.167);
+		\node[tick, anchor=east] at (-0.10,4.167) {0.5};
+		\draw[grid] (0.10,5.000) -- (13.90,5.000);
+		\node[tick, anchor=east] at (-0.10,5.000) {0.6};
+		\draw[axisline] (0.00,0) -- (0.00,5);
+		\draw[zeroline] (0.10,0.000) -- (13.90,0.000);
+		\node[rotate=90, anchor=south, text=black!70] at (-0.88,2.5) {Spearman correlation};
+
+		\foreach \x/\lo/\m/\hi/\c/\w/\s/\b in {%
+				0.38/1.881/2.512/3.109/barone/0.28/85/0.000,
+				1.00/2.196/2.839/3.426/bartwo/0.28/85/0.000,
+				1.62/2.347/2.997/3.619/barthree/0.28/85/0.000,
+				2.78/1.766/2.644/3.450/barone/0.28/85/0.000,
+				3.40/2.680/3.441/4.252/bartwo/0.28/85/0.000,
+				4.02/2.007/2.839/3.609/barthree/0.28/85/0.000,
+				5.18/1.791/2.442/3.013/barone/0.28/85/0.000,
+				5.80/2.331/2.989/3.617/bartwo/0.28/85/0.000,
+				6.42/1.989/2.686/3.352/barthree/0.28/85/0.000,
+				7.58/2.063/2.758/3.362/barone/0.28/85/0.000,
+				8.20/2.281/2.950/3.569/bartwo/0.28/85/0.000,
+				8.82/2.661/3.356/3.977/barthree/0.28/85/0.000,
+				9.98/1.173/1.891/2.609/barone/0.28/85/0.000,
+				10.60/1.145/1.906/2.648/bartwo/0.28/85/0.000,
+				11.22/1.704/2.435/3.168/barthree/0.28/85/0.000,
+				12.38/0.891/2.143/3.486/barone/0.28/85/0.000,
+				13.00/1.124/2.289/3.498/bartwo/0.28/85/0.000,
+				13.62/2.045/3.107/4.180/barthree/0.28/85/0.000}{%
+				\fill[\c!\s] ({\x-\w},\b) rectangle ({\x+\w},\m);
+				\draw[draw=\c!70!black, line width=0.3pt] ({\x-\w},\b) rectangle ({\x+\w},\m);
+				\draw[errbar] (\x,\lo) -- (\x,\hi);
+				\draw[errbar] ({\x-0.36*\w},\lo) -- ({\x+0.36*\w},\lo);
+				\draw[errbar] ({\x-0.36*\w},\hi) -- ({\x+0.36*\w},\hi);}
+
+		\node[anchor=north, align=center, inner sep=3pt] at (1.00,0) {all eight \\(published) \\8 models};
+		\node[anchor=north, align=center, inner sep=3pt] at (3.40,0) {open \\weight only \\5 models};
+		\node[anchor=north, align=center, inner sep=3pt] at (5.80,0) {no GPT \\family \\7 models};
+		\node[anchor=north, align=center, inner sep=3pt] at (8.20,0) {drop the \\weakest \\7 models};
+		\node[anchor=north, align=center, inner sep=3pt] at (10.60,0) {drop two \\weakest \\6 models};
+		\node[anchor=north, align=center, inner sep=3pt] at (13.00,0) {frontier \\only \\3 models};
+
+		\node[glabel, anchor=east] at ([yshift=0.45cm]1.35,5.000) {rubric generator:};
+		\node[key, fill=barone!85, draw=barone!70!black, anchor=center] (legendkey0) at ([yshift=0.45cm]1.50,5.000) {};
+		\node[anchor=west, inner sep=2pt] (legendname0) at (legendkey0.east) {Qwen3.8-27B};
+		\node[key, fill=bartwo!85, draw=bartwo!70!black, anchor=center] (legendkey1) at ([xshift=0.45cm]legendname0.east) {};
+		\node[anchor=west, inner sep=2pt] (legendname1) at (legendkey1.east) {Deepseek-V4-Flash};
+		\node[key, fill=barthree!85, draw=barthree!70!black, anchor=center] (legendkey2) at ([xshift=0.45cm]legendname1.east) {};
+		\node[anchor=west, inner sep=2pt] (legendname2) at (legendkey2.east) {Opus-5};
+
+	\end{tikzpicture}
+	\caption{}
+	\label{fig:response_curations}
+\end{figure}

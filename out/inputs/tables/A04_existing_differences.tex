@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+ & \shortstack{Deepseek-V4-Flash \\ $-$ Qwen3.8-27B} & \shortstack{Opus-5 \\ $-$ Qwen3.8-27B} & \shortstack{Opus-5 \\ $-$ Deepseek-V4-Flash} \\
+\midrule
+LLM-matching $F_1$ & 0.04 (0.02, 0.05) & 0.02 (0.01, 0.04) & -0.01 (-0.03, 0.00) \\
+Score Correlation & 0.04 (-0.05, 0.13) & 0.06 (-0.02, 0.15) & 0.02 (-0.06, 0.09) \\
+Score Correlation (physician) & -0.05 (-0.21, 0.09) & 0.03 (-0.14, 0.19) & 0.07 (-0.10, 0.27) \\
+\shortstack[l]{Discrimination between \\ high/low quality responses} & 0.05 (-0.03, 0.15) & 0.13 (0.03, 0.23) & 0.08 (-0.02, 0.18) \\
+\bottomrule
+\end{tabular}
+\caption{}
+\label{tab:existing_differences}
+\end{table}

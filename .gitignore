@@ -1,0 +1,28 @@
+__pycache__/
+.venv
+.vscode
+.ruff_cache/
+.DS_Store
+**copy**
+
+# API keys and the per-key model routing map stay local.
+api_keys*.txt
+api_keys_map/
+
+# HealthBench is downloaded by dataset/load_healthbench.py.
+healthbench_data/
+
+CLAUDE.md
+.claude/
+
+# The response cache, extracted from cache.tar.gz by setup.sh.
+/cache/
+
+# Raw per-example run outputs. They regenerate from the cache with no API spend,
+# and tables.json, which the figures read, stays tracked.
+experiments/out/pickle/
+
+# The output of reproduce.sh. We track out/inputs/, so git status shows if a figure, table or prompt changes.
+# The LaTeX build files and out/figures.pdf are not tracked.
+/out/*
+!/out/inputs/

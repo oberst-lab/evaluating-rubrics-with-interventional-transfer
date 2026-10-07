@@ -1,0 +1,3 @@
+REFERENCE: {ref_text}
+GENERATED: {gen_text}
+Similarity score (0..9):

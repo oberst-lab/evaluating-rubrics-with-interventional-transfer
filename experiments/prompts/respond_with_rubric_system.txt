@@ -1,0 +1,1 @@
+You are a helpful AI assistant. Answer the user's question concisely. Your response must satisfy every criterion in the rubric you are given.

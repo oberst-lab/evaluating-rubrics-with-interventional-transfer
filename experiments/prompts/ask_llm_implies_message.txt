@@ -1,0 +1,12 @@
+Call the tool with one field:
+
+**indices**: A JSON object mapping each generated criterion's label to the list of true criteria it logically implies. Use the label at the start of each line — generated criteria are G0, G1, ... and true criteria are T0, T1, ... Every generated criterion label must appear exactly once as a key, mapped to an empty list if it implies no true criterion. Keys are always G labels and values are always T labels. Never put a G label in a value.
+
+# Conversation
+{conversation}
+
+# True Rubric
+{true_rubric}
+
+# Generated Rubric
+{generated_rubric}

@@ -1,0 +1,3 @@
+Rewrite each of these criteria so that satisfying it is good.
+
+{criteria}

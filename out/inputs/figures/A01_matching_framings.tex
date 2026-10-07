@@ -1,0 +1,68 @@
+\providecolor{barexpert}{HTML}{6B6B6B}
+\providecolor{barone}{HTML}{2A78D6}
+\providecolor{bartwo}{HTML}{EB6834}
+\providecolor{barthree}{HTML}{1BAF7A}
+\providecolor{barfour}{HTML}{8E5EA2}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[
+			x=1.3cm, y=1cm,
+			font=\footnotesize,
+			grid/.style={draw=black!12, line width=0.3pt},
+			zeroline/.style={draw=black!55, line width=0.5pt},
+			axisline/.style={draw=black!45, line width=0.4pt},
+			errbar/.style={draw=black!70, line width=0.55pt},
+			tick/.style={font=\scriptsize, text=black!65},
+			glabel/.style={font=\scriptsize, text=black!55},
+			key/.style={draw=black!25, minimum width=0.26cm, minimum height=0.16cm, inner sep=0pt, line width=0.3pt},
+		]
+
+		\draw[grid] (0.10,0.000) -- (6.70,0.000);
+		\node[tick, anchor=east] at (-0.10,0.000) {0};
+		\draw[grid] (0.10,1.000) -- (6.70,1.000);
+		\node[tick, anchor=east] at (-0.10,1.000) {0.1};
+		\draw[grid] (0.10,2.000) -- (6.70,2.000);
+		\node[tick, anchor=east] at (-0.10,2.000) {0.2};
+		\draw[grid] (0.10,3.000) -- (6.70,3.000);
+		\node[tick, anchor=east] at (-0.10,3.000) {0.3};
+		\draw[grid] (0.10,4.000) -- (6.70,4.000);
+		\node[tick, anchor=east] at (-0.10,4.000) {0.4};
+		\draw[grid] (0.10,5.000) -- (6.70,5.000);
+		\node[tick, anchor=east] at (-0.10,5.000) {0.5};
+		\draw[axisline] (0.00,0) -- (0.00,5);
+		\draw[zeroline] (0.10,0.000) -- (6.70,0.000);
+		\node[rotate=90, anchor=south, text=black!70] at (-0.88,2.5) {matching $F_1$};
+
+		\foreach \x/\lo/\m/\hi/\c/\w/\s/\b in {%
+				0.38/3.168/3.521/3.851/barone/0.28/85/0.000,
+				1.00/3.559/3.913/4.248/bartwo/0.28/85/0.000,
+				1.62/3.533/3.882/4.238/barthree/0.28/85/0.000,
+				2.78/2.192/2.512/2.837/barone/0.28/85/0.000,
+				3.40/2.722/3.040/3.383/bartwo/0.28/85/0.000,
+				4.02/2.684/2.970/3.292/barthree/0.28/85/0.000,
+				5.18/0.574/0.752/0.934/barone/0.28/85/0.000,
+				5.80/0.949/1.150/1.354/bartwo/0.28/85/0.000,
+				6.42/1.147/1.314/1.497/barthree/0.28/85/0.000}{%
+				\fill[\c!\s] ({\x-\w},\b) rectangle ({\x+\w},\m);
+				\draw[draw=\c!70!black, line width=0.3pt] ({\x-\w},\b) rectangle ({\x+\w},\m);
+				\draw[errbar] (\x,\lo) -- (\x,\hi);
+				\draw[errbar] ({\x-0.36*\w},\lo) -- ({\x+0.36*\w},\lo);
+				\draw[errbar] ({\x-0.36*\w},\hi) -- ({\x+0.36*\w},\hi);}
+
+		\node[anchor=north, align=center, inner sep=3pt] at (1.00,0) {Match \\measures the \\same thing};
+		\node[anchor=north, align=center, inner sep=3pt] at (3.40,0) {Simulate \\would move \\with it};
+		\node[anchor=north, align=center, inner sep=3pt] at (5.80,0) {Implies \\logically \\entails it};
+
+		\node[glabel, anchor=east] at ([yshift=0.45cm]1.35,5.000) {rubric generator:};
+		\node[key, fill=barone!85, draw=barone!70!black, anchor=center] (legendkey0) at ([yshift=0.45cm]1.50,5.000) {};
+		\node[anchor=west, inner sep=2pt] (legendname0) at (legendkey0.east) {Qwen3.8-27B};
+		\node[key, fill=bartwo!85, draw=bartwo!70!black, anchor=center] (legendkey1) at ([xshift=0.45cm]legendname0.east) {};
+		\node[anchor=west, inner sep=2pt] (legendname1) at (legendkey1.east) {Deepseek-V4-Flash};
+		\node[key, fill=barthree!85, draw=barthree!70!black, anchor=center] (legendkey2) at ([xshift=0.45cm]legendname1.east) {};
+		\node[anchor=west, inner sep=2pt] (legendname2) at (legendkey2.east) {Opus-5};
+
+	\end{tikzpicture}
+	\caption{}
+	\label{fig:matching_framings}
+\end{figure}

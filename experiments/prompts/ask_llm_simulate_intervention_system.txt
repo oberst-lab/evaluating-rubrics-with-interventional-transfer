@@ -1,0 +1,3 @@
+A rubric is a set of criteria which measure a yes/no question about a response. You will be given a conversation, the true rubric written by human physicians, and a generated rubric.
+
+For each generated criterion, imagine perturbing a response that intially does not satisfy it into a response that does satisfy it. Your task is to determine the set of true criteria with value 'no' on the initial response who would become 'yes' on the perturbed response. That is, which set of true criteria move with the generated. 

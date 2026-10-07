@@ -1,0 +1,10 @@
+\label{prompt:rubric_rag_llm_matching}
+\begin{textbox}{rubric\_rag\_llm\_matching}
+# System
+You are an expert evaluator of rubric criterion similarity for health AI systems. Given ONE reference criterion and ONE generated criterion, output a single integer score in [0,9] representing semantic similarity (9 = same meaning, 0 = unrelated). Output ONLY the number. No JSON. No explanation. No extra text.
+
+# Message
+REFERENCE: {ref_text}
+GENERATED: {gen_text}
+Similarity score (0..9):
+\end{textbox}
